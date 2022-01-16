@@ -4,18 +4,28 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 
 public class CoinTest {
+    private CoinValidationSystem coinValidationSystem;
     @Before
     public void setup(){
 
+        coinValidationSystem = new CoinValidationSystem();
     }
     @Test
     public void accept_5_cent_coin(){
         Coin fiveCentCoin = new Coin(21.25, 3.9);
-        CoinValidationSystem coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(fiveCentCoin);
 
         assertTrue(result);
     }
-    
+    @Test
+    public void accept_10_cent_coin(){
+        Coin fiveCentCoin = new Coin(19.75, 1.51);
+        coinValidationSystem = new CoinValidationSystem();
+
+        boolean result = coinValidationSystem.validate(fiveCentCoin);
+
+        assertTrue(result);
+    }
+
 }
