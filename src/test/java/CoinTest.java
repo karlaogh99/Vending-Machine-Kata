@@ -27,5 +27,14 @@ public class CoinTest {
 
         assertTrue(result);
     }
+    @Test
+    public void accept_20_cent_coin(){
+        Coin twentyCentCoin = new Coin(22.25, 1.63);
+        coinValidationSystem = new CoinValidationSystem();
+
+        boolean result = coinValidationSystem.validate(twentyCentCoin);
+
+        assertTrue(result);
+    }
 
 }
