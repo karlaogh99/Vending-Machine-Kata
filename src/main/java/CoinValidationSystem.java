@@ -10,6 +10,9 @@ public class CoinValidationSystem {
         if (isTwentyCoin(coin)){
             return true;
         }
+        if (isFyftyCoin(coin)){
+            return true;
+        }
         return false;
     }
 
