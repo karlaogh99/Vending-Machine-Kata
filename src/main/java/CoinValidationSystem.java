@@ -13,6 +13,9 @@ public class CoinValidationSystem {
         if (isFyftyCoin(coin)){
             return true;
         }
+        if (is1EuroCoin(coin)){
+            return true;
+        }
         return false;
     }
 
@@ -29,7 +32,9 @@ public class CoinValidationSystem {
     private boolean isFyftyCoin(Coin coin) {
         return coin.getDiametro() == 24.25 && coin.getPeso() == 1.88;
     }
-
+    private boolean is1EuroCoin(Coin coin) {
+        return coin.getDiametro() == 23.25 && coin.getPeso() == 2.125;
+    }
 
 
 

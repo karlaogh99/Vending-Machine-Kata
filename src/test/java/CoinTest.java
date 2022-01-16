@@ -46,5 +46,14 @@ public class CoinTest {
 
         assertTrue(result);
     }
+    @Test
+    public void accept_1_euro_coin(){
+        this.coinTest = new Coin(23.25, 2.125);
+        coinValidationSystem = new CoinValidationSystem();
+
+        boolean result = coinValidationSystem.validate(coinTest);
+
+        assertTrue(result);
+    }
 
 }
