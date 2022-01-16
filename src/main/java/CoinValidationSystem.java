@@ -4,6 +4,9 @@ public class CoinValidationSystem {
         if (isFiveCoin(coin)){
             return true;
         }
+        if (coin.getDiametro() == 19.75 && coin.getPeso() == 1.51){
+            return true;
+        }
         return false;
     }
 

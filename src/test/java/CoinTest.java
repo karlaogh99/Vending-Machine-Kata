@@ -20,10 +20,10 @@ public class CoinTest {
     }
     @Test
     public void accept_10_cent_coin(){
-        Coin fiveCentCoin = new Coin(19.75, 1.51);
+        Coin tenCentCoin = new Coin(19.75, 1.51);
         coinValidationSystem = new CoinValidationSystem();
 
-        boolean result = coinValidationSystem.validate(fiveCentCoin);
+        boolean result = coinValidationSystem.validate(tenCentCoin);
 
         assertTrue(result);
     }
