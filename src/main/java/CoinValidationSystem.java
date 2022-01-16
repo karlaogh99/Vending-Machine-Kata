@@ -16,6 +16,9 @@ public class CoinValidationSystem {
         if (is1EuroCoin(coin)){
             return true;
         }
+        if (is2EuroCoin(coin)){
+            return true;
+        }
         return false;
     }
 
@@ -35,7 +38,9 @@ public class CoinValidationSystem {
     private boolean is1EuroCoin(Coin coin) {
         return coin.getDiametro() == 23.25 && coin.getPeso() == 2.125;
     }
-
+    private boolean is2EuroCoin(Coin coin) {
+        return coin.getDiametro() == 25.75 && coin.getPeso() == 1.95;
+    }
 
 
 }
