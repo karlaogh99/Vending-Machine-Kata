@@ -37,5 +37,14 @@ public class CoinTest {
 
         assertTrue(result);
     }
+    @Test
+    public void accept_50_cent_coin(){
+        this.coinTest = new Coin(24.25, 1.88);
+        coinValidationSystem = new CoinValidationSystem();
+
+        boolean result = coinValidationSystem.validate(coinTest);
+
+        assertTrue(result);
+    }
 
 }

@@ -23,6 +23,9 @@ public class CoinValidationSystem {
     private boolean isTwentyCoin(Coin coin) {
         return coin.getDiametro() == 22.25 && coin.getPeso() == 1.63;
     }
+    private boolean isFyftyCoin(Coin coin) {
+        return coin.getDiametro() == 24.25 && coin.getPeso() == 1.88;
+    }
 
 
 
