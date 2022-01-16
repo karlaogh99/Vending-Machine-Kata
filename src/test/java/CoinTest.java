@@ -5,6 +5,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class CoinTest {
     private CoinValidationSystem coinValidationSystem;
+    private Coin coinTest;
     @Before
     public void setup(){
 
@@ -12,27 +13,27 @@ public class CoinTest {
     }
     @Test
     public void accept_5_cent_coin(){
-        Coin fiveCentCoin = new Coin(21.25, 3.9);
+        this.coinTest = new Coin(21.25, 3.9);
 
-        boolean result = coinValidationSystem.validate(fiveCentCoin);
+        boolean result = coinValidationSystem.validate(coinTest);
 
         assertTrue(result);
     }
     @Test
     public void accept_10_cent_coin(){
-        Coin tenCentCoin = new Coin(19.75, 1.51);
+        this.coinTest = new Coin(19.75, 1.51);
         coinValidationSystem = new CoinValidationSystem();
 
-        boolean result = coinValidationSystem.validate(tenCentCoin);
+        boolean result = coinValidationSystem.validate(coinTest);
 
         assertTrue(result);
     }
     @Test
     public void accept_20_cent_coin(){
-        Coin twentyCentCoin = new Coin(22.25, 1.63);
+        this.coinTest = new Coin(22.25, 1.63);
         coinValidationSystem = new CoinValidationSystem();
 
-        boolean result = coinValidationSystem.validate(twentyCentCoin);
+        boolean result = coinValidationSystem.validate(coinTest);
 
         assertTrue(result);
     }

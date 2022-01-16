@@ -7,6 +7,9 @@ public class CoinValidationSystem {
         if (isTenCoin(coin)){
             return true;
         }
+        if (isTwentyCoin(coin)){
+            return true;
+        }
         return false;
     }
 
@@ -16,6 +19,9 @@ public class CoinValidationSystem {
 
     private boolean isFiveCoin(Coin coin) {
         return coin.getDiametro() == 21.25 && coin.getPeso() == 3.9;
+    }
+    private boolean isTwentyCoin(Coin coin) {
+        return coin.getDiametro() == 22.25 && coin.getPeso() == 1.63;
     }
 
 
