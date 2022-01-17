@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
 
-public class CoinTest {
+public class CoinValidationSystemTest {
     private CoinValidationSystem coinValidationSystem;
     private Coin coinTest;
     @Before
