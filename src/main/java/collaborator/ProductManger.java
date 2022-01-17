@@ -15,12 +15,12 @@ public class ProductManger {
 
     private HashMap<String , Product> loadProductCalalog(){
         HashMap<String , Product> resproductCatalog = new HashMap<>();
-
+        resproductCatalog.put("A1",new Product("Botella 50cl", 0.65));
 
         return resproductCatalog;
 
     }
-    public boolean isRegistered(Product productToCheck){
-        return false;
+    public boolean isRegistered(String productToCheck){
+        return (productCatalog.get(productToCheck) != null);
     }
 }

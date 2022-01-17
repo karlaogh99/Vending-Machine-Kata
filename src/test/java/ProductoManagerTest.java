@@ -15,7 +15,7 @@ public class ProductoManagerTest {
     @Test
     public void one_product_exis(){
         ProductManger productManger = new ProductManger();
-        Product productToTest= new Product("Botella 50cl", 0.65);
+        String productToTest= "A1";
 
         boolean result = productManger.isRegistered(productToTest);
         assertTrue(result);
