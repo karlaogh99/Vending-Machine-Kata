@@ -2,8 +2,10 @@ import collaborator.AmountSystem;
 import model.Coin;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class AmountSystemTest {
     AmountSystem amountSystem;
@@ -57,4 +59,24 @@ public class AmountSystemTest {
         assertEquals(totalAmount, expectedAmount);
 
     }
+    @Test
+    public void verify_amount_Added(){
+        double expectedAmount = 1.85;
+        AmountSystem mockAmountSystem = Mockito.mock(AmountSystem.class);
+
+        //doReturn(1.00).when(mockAmountSystem).getCurrentAccount();
+        //double result = mockAmountSystem.getCurrentAccount();
+
+        mockAmountSystem.addAmountFrom(twentyCentCoin);
+        mockAmountSystem.addAmountFrom(fiveCentCoin);
+        mockAmountSystem.addAmountFrom(fiftyCentCoin);
+        mockAmountSystem.addAmountFrom(tenCentCoin);
+
+        verify(mockAmountSystem, atLeast(1)).addAmountFrom(fiveCentCoin);
+        verify(mockAmountSystem, atLeast(1)).addAmountFrom(twentyCentCoin);
+        verify(mockAmountSystem, atLeast(1)).addAmountFrom(fiftyCentCoin);
+        verify(mockAmountSystem, atLeast(1)).addAmountFrom(tenCentCoin);
+
+    }
+
 }
