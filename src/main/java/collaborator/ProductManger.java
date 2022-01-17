@@ -23,4 +23,8 @@ public class ProductManger {
     public boolean isRegistered(String productToCheck){
         return (productCatalog.get(productToCheck) != null);
     }
+
+    public double getPriceOf(String productToTest) {
+        return 0.00;
+    }
 }
