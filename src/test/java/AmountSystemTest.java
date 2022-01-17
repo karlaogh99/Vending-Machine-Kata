@@ -1,3 +1,5 @@
+import collaborator.AmountSystem;
+import model.Coin;
 import org.junit.Before;
 import org.junit.Test;
 

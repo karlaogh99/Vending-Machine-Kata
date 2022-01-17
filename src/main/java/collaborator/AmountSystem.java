@@ -1,3 +1,6 @@
+package collaborator;
+
+import model.Coin;
 
 import java.util.HashMap;
 

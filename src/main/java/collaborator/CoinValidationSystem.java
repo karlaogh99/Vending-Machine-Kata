@@ -1,3 +1,7 @@
+package collaborator;
+
+import model.Coin;
+
 public class CoinValidationSystem {
 
     public boolean validate(Coin coin) {

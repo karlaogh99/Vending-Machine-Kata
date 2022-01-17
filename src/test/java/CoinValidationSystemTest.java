@@ -1,3 +1,5 @@
+import collaborator.CoinValidationSystem;
+import model.Coin;
 import org.junit.Before;
 import org.junit.Test;
 

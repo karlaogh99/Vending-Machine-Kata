@@ -1,3 +1,5 @@
+package model;
+
 public class Coin {
     private final double peso;
     private final double diametro;
