@@ -25,6 +25,6 @@ public class ProductManger {
     }
 
     public double getPriceOf(String productToTest) {
-        return 0.00;
+        return productCatalog.get(productToTest).getPrice();
     }
 }
