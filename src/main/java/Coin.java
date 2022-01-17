@@ -16,5 +16,18 @@ public class Coin {
         return peso;
     }
 
+    @Override
+    public boolean equals(Object obj ){
+        if (obj instanceof Coin){
+            Coin coinToCompare = (Coin) obj;
+            return (coinToCompare.getDiametro() == this.diametro &&
+                    coinToCompare.getPeso() == this.peso);
+        }
+        return false;
+    }
+    @Override
+    public int hashCode(){
+        return 0;
+    }
 
 }

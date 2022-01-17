@@ -5,7 +5,7 @@ public class AmountSystem {
 
     private double currentAmount;
     private CoinValidationSystem coinValidationSystem;
-    private HashMap<Double, Double> amountDictionary;
+    private HashMap<Coin, Double> amountDictionary;
 
     public AmountSystem() {
         this.currentAmount = 0.0;
@@ -13,9 +13,9 @@ public class AmountSystem {
         this.amountDictionary = loadAmountDictioanary();
     }
 
-    private HashMap <Double, Double> loadAmountDictioanary(){
+    private HashMap <Coin, Double> loadAmountDictioanary(){
         amountDictionary = new HashMap<>();
-        amountDictionary.put(23.25, 1.00);
+        amountDictionary.put(new Coin(23.25, 7.5), 1.00);
         return amountDictionary;
     }
 
@@ -33,6 +33,6 @@ public class AmountSystem {
     }
 
     private double getAmountFrom(Coin coin) {
-        return this.amountDictionary.get(coin.getDiametro());
+        return this.amountDictionary.get(coin);
     }
 }
