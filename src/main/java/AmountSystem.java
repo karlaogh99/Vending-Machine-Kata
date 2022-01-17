@@ -16,6 +16,12 @@ public class AmountSystem {
     private HashMap <Coin, Double> loadAmountDictioanary(){
         amountDictionary = new HashMap<>();
         amountDictionary.put(new Coin(23.25, 7.5), 1.00);
+        amountDictionary.put(new Coin(22.25, 5.7), 0.20);
+        amountDictionary.put(new Coin(21.25, 3.9), 0.05);
+        amountDictionary.put(new Coin(24.25, 7.8), 0.50);
+        amountDictionary.put(new Coin(25.75, 8.5), 2.00);
+        amountDictionary.put(new Coin(19.75, 4.1), 0.10);
+
         return amountDictionary;
     }
 
@@ -33,6 +39,11 @@ public class AmountSystem {
     }
 
     private double getAmountFrom(Coin coin) {
-        return this.amountDictionary.get(coin);
+        return amountDictoniaryContains(coin) ?
+                this.amountDictionary.get(coin) : 0.00;
     }
+    private boolean amountDictoniaryContains(Coin coin) {
+        return this.amountDictionary.get(coin) != null ;
+    }
+
 }
