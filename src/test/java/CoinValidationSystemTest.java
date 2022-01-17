@@ -21,7 +21,7 @@ public class CoinValidationSystemTest {
     }
     @Test
     public void accept_10_cent_coin(){
-        this.coinTest = new Coin(19.75, 1.51);
+        this.coinTest = new Coin(19.75, 4.1);
         coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(coinTest);
@@ -30,7 +30,7 @@ public class CoinValidationSystemTest {
     }
     @Test
     public void accept_20_cent_coin(){
-        this.coinTest = new Coin(22.25, 1.63);
+        this.coinTest = new Coin(22.25, 5.7);
         coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(coinTest);
@@ -39,7 +39,7 @@ public class CoinValidationSystemTest {
     }
     @Test
     public void accept_50_cent_coin(){
-        this.coinTest = new Coin(24.25, 1.88);
+        this.coinTest = new Coin(24.25, 7.8);
         coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(coinTest);
@@ -48,7 +48,7 @@ public class CoinValidationSystemTest {
     }
     @Test
     public void accept_1_euro_coin(){
-        this.coinTest = new Coin(23.25, 2.125);
+        this.coinTest = new Coin(23.25, 7.5);
         coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(coinTest);
@@ -57,7 +57,7 @@ public class CoinValidationSystemTest {
     }
     @Test
     public void accept_2_euro_coin(){
-        this.coinTest = new Coin(25.75, 1.95);
+        this.coinTest = new Coin(25.75, 8.5);
         coinValidationSystem = new CoinValidationSystem();
 
         boolean result = coinValidationSystem.validate(coinTest);

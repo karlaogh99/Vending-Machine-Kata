@@ -14,7 +14,7 @@ public class AmountSystemTest {
     @Test
     public void add_the_amount_of_a_coin_if_is_accept(){
         AmountSystem amountSystem = new AmountSystem();
-        Coin oneEuroCoin = new Coin(23.25, 2.125);
+        Coin oneEuroCoin = new Coin(23.25, 7.5);
 
         double expectedAmount = 1.00;
         amountSystem.addAmountFrom(oneEuroCoin);

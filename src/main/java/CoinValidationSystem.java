@@ -23,23 +23,23 @@ public class CoinValidationSystem {
     }
 
     private boolean isTenCoin(Coin coin) {
-        return coin.getDiametro() == 19.75 && coin.getPeso() == 1.51;
+        return coin.getDiametro() == 19.75 && coin.getPeso() == 4.1;
     }
 
     private boolean isFiveCoin(Coin coin) {
         return coin.getDiametro() == 21.25 && coin.getPeso() == 3.9;
     }
     private boolean isTwentyCoin(Coin coin) {
-        return coin.getDiametro() == 22.25 && coin.getPeso() == 1.63;
+        return coin.getDiametro() == 22.25 && coin.getPeso() == 5.7;
     }
     private boolean isFyftyCoin(Coin coin) {
-        return coin.getDiametro() == 24.25 && coin.getPeso() == 1.88;
+        return coin.getDiametro() == 24.25 && coin.getPeso() == 7.8;
     }
     private boolean is1EuroCoin(Coin coin) {
-        return coin.getDiametro() == 23.25 && coin.getPeso() == 2.125;
+        return coin.getDiametro() == 23.25 && coin.getPeso() == 7.5;
     }
     private boolean is2EuroCoin(Coin coin) {
-        return coin.getDiametro() == 25.75 && coin.getPeso() == 1.95;
+        return coin.getDiametro() == 25.75 && coin.getPeso() == 8.5;
     }
 
 
